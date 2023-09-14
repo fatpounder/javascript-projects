@@ -30,3 +30,4 @@ if (launchReady) {
 } else {
    console.log('Launch scrubbed.');
 }
+//Pretty sure it should not have launched with insufficient fuel! 
