@@ -1,8 +1,8 @@
-const input = require("readline-sync");
+//const input = require("readline-sync");
 
 let myName = input.question("What's your name?");
 let myAge = Number(input.question("\nHow old are you?"));
-let myPhrase;
+let myPhrase = "";
 
 if (myAge < 18) {
     myPhrase = "Parental supervision advised.";
