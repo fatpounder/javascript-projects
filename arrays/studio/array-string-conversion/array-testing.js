@@ -51,21 +51,28 @@ console.log(semiDash());
 
 //4)
 function reverseSpaces() {
-	let check = protoArray3.includes(" ");
-	let output = protoArray3.split(" ").reverse().join(" ");
+	let check 
+	let output
   //TODO: write the code required for this step
-
+	if (protoArray3.includes(" ")) {
+		output = protoArray3.split(" ").reverse().join(" ")
+	}
 	return output;
 }
+console.log(reverseSpaces())
 
 //5)
 function commaSpace() {
-	let check = protoArray4.includes(", ");
-	let output = protoArray4.split(", ");
+	let check
+	let output
 	//TODO: write the code required for this step
-  
+	if (protoArray4.includes(", ")) {
+	output = protoArray4.split(", ").reverse().join(",")
+	}
 	return output;
 }
+console.log(commaSpace())
+
 
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
