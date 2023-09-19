@@ -3,23 +3,46 @@ let protoArray2 = "A;C;M;E";
 let protoArray3 = "space delimited string";
 let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
+// console.log(protoArray1.includes(","))
+// console.log(protoArray1.includes(";"))
+// console.log(protoArray1.includes(" "))
+// console.log(protoArray2.includes(","))
+// console.log(protoArray2.includes(";"))
+// console.log(protoArray2.includes(" "))
+// console.log(protoArray3.includes(","))
+// console.log(protoArray3.includes(";"))
+// console.log(protoArray3.includes(" "))
+// console.log(protoArray4.includes(","))
+// console.log(protoArray4.includes(";"))
+// console.log(protoArray4.includes(" "))
+
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
+let newArray
 
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
-	let check;
-	let output;
-	//TODO: 2. write the code required for this step
+	let check = protoArray1.includes(",");
+	let output
+ 	//TODO: 2. write the code required for this step
+	if (check == true) {
+		output = protoArray1.split(",").reverse().join(",");
+	}
 
-	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
-	return output;
+
+	return output
+
 }
+console.log(reverseCommas())
+
+//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
+	//return output;
+
 
 //3)
 function semiDash() {
-	let check;
-	let output;
+	let check = protoArray2.includes(";");
+	let output = protoArray2.split(";").sort().join("-");
 //TODO: write the code required for this step
 
   
@@ -28,8 +51,8 @@ function semiDash() {
 
 //4)
 function reverseSpaces() {
-	let check;
-	let output;
+	let check = protoArray3.includes(" ");
+	let output = protoArray3.split(" ").reverse().join(" ");
   //TODO: write the code required for this step
 
 	return output;
@@ -37,8 +60,8 @@ function reverseSpaces() {
 
 //5)
 function commaSpace() {
-	let check;
-	let output;
+	let check = protoArray4.includes(", ");
+	let output = protoArray4.split(", ");
 	//TODO: write the code required for this step
   
 	return output;
