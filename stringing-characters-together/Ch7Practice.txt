@@ -181,9 +181,10 @@ const input = require('readline-sync');
 
 let myName = input.question("What is your name?");
 
-// if (myName === "drareg") {
-//       console.log("Very funny. /s");
-// } else {
-//       console.log("Good afternoon! :)");
-// }
+
+if (myName === "drareg") {
+       console.log("Very funny. /s");
+ } else {
+       console.log("Good afternoon! :)");
+ }
 
