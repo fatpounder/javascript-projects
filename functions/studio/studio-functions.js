@@ -21,7 +21,7 @@ function reverseCharacters(str) {
         str = String(str);
         //console.log(typeof(str));
         str.split("").reverse().join("");
-        Number(str);
+        str = Number(str);
         return str
     }
 }
