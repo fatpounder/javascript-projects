@@ -15,30 +15,18 @@ let emptyArr = []
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
 function reverseCharacters(str) {
-    if (typeof str === "string") {
-        return str.split("").reverse().join("");
-    } else {
-        str = String(str);
-        //console.log(typeof(str));
-        str.split("").reverse().join("");
+    if (typeof(str) === Number) {
+        String(str);
+        str.split('').reverse().join('');
         Number(str);
+        return str;
+    } else {
+        str.split('').reverse().join(''); 
         return str
     }
 }
 let revString = "'hello', 'world', 123, 'orange'"
 console.log(reverseCharacters(revString));
-
-
-
-function completeReversal(arr) {
-    let emptyArr2 = []
-    for (let i = 0; i < arr.length; i++) {
-        emptyArr2.push(reverseCharacters(arr[i]));
-    }
-    return emptyArr2.reverse()
-}
-let comRevArr = ['hello', 'world', 123, 'orange']
-console.log(completeReversal(comRevArr))
 
 // Part Two: Reverse Digits
 
@@ -49,6 +37,22 @@ console.log(completeReversal(comRevArr))
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
 
 // Part Three: Complete Reversal
+let arr = arrayTest3
+
+function completeReversal(arr) {
+    let emptyArr = []
+    //arr.reverse();
+    // console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        //console.log(x);
+        emptyArr.push(reverseCharacters(arr[i]));
+        console.log(emptyArr);
+    }
+    emptyArr.reverse();
+    return emptyArr
+}
+
+console.log(completeReversal(arr))
 
 // 1. Define and initialize an empty array.
 // 2. Loop through the old array.
