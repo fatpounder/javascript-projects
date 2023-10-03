@@ -56,3 +56,23 @@ let candidateA = {
  
  let crew = [candidateA,candidateC,candidateE];
  
+function orbitCircumference() {
+  let circumference = Math.round(Math.PI*2*2000);
+  return circumference;
+}
+console.log(orbitCircumference())
+
+function missionDuration(numOrbits, orbitRadius = 2000, orbitalSpeed = 28000) {
+  let time = Math.round((numOrbits*(orbitCircumference(orbitRadius)))/(orbitalSpeed)*1000)/100
+  return time
+}
+console.log(missionDuration(3))
+
+console.log(`The mission will travel ${orbitCircumference()} km around the planet, and it will take ${missionDuration(3)} hours to complete.`)
+
+function oxygenExpended(candidate) {
+  hours = missionDuration(3)
+  oxygenCon = Math.round(candidate.o2Used(hours)*1000)/1000
+  return `${candidate.name} will perform the spacewalk, which will last ${hours} hours and require ${oxygenCon} kg of oxygen.`
+}
+console.log(oxygenExpended(candidateA))

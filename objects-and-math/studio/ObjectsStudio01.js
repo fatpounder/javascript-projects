@@ -53,3 +53,32 @@ let candidateF = {
 let animals = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
 
 // Code your template literal and console.log statements:
+function selectRandomEntry(arr) {
+  let index = Math.floor(Math.random()*arr.length);
+  return arr[index];
+}
+
+let astroIDs = [];
+while (astroIDs.length < 3) {
+  let randoID = selectRandomEntry(idNumbers);
+  if (!astroIDs.includes(randoID)) {
+    astroIDs.push(randoID);
+  }
+}
+
+function buildCrewArray(candidates, selectedIDs) {
+  let selectedCrew = [];
+  for (let i = 0; i < candidates.length; i++) {
+    if (selectedIDs.includes(candidates[i].astronautID)) {
+      selectedCrew.push(candidates[i]);
+    }
+  }
+  return selectedCrew; 
+}
+
+let crew = buildCrewArray(animals, astroIDs);
+
+console.log(crew);
+
+let output = `${crew[0].name}, ${crew[1].name}, and ${crew[2].name} are going to space!`
+console.log(output);
