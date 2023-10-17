@@ -19,9 +19,9 @@ class CrewCandidate {
         let avgScore = this.average()
         if (avgScore >= 90) {
             return "Accepted"
-        } else if (avgScore >= 80 && avgScore <= 89) {
+        } else if (avgScore >= 80) {
             return "Reserve"
-        } else if (avgScore >= 70 && avgScore <= 79) {
+        } else if (avgScore >= 70) {
             return "Probationary"
         } else {
             return "Rejected"        
