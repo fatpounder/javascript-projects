@@ -12,6 +12,7 @@ class Book {
     checkout(times = 1) {
         this.numCheckedOut += times;
     }
+    
 }
 
 // Define your Manual and Novel classes here:

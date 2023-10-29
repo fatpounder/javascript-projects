@@ -47,3 +47,5 @@ while (num < 1 || num > 9 || isNaN(num)) {
     num = Number(input.question("Number must be greater than 0 and less than 10"))
 }
 
+
+
